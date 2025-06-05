@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Main endpoint returning a simple message
 app.get('/api/message', (req, res) => {
-    res.json({
+    return res.json({
         greeting: "Hello from the backend!",
         version: "1.0",
         timestamp: new Date().toISOString()
