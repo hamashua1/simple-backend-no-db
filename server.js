@@ -19,7 +19,11 @@ app.get('/api/message', (req, res) => {
 
 // Root endpoint for basic check
 app.get('/', (req, res) => {
-    res.send("Backend server is running. Access /api/message for data.");
+    res.json({
+        status: "running",
+        message: "Backend server is running. Access /api/message for data.",
+        timestamp: new Date().toISOString()
+    });
 });
 
 app.listen(port, () => {
