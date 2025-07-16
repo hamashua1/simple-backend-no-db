@@ -9,7 +9,7 @@ app.use(cors()); // Allow all origins for simplicity in development
 app.use(express.json());
 
 // Main endpoint returning a simple message
-app.get('/api/message', (req, res) => {
+app.get('/api/message', (_, res) => {
     return res.json({
         greeting: "Hello from the backend!",
         version: "1.0",
@@ -18,7 +18,7 @@ app.get('/api/message', (req, res) => {
 });
 
 // Root endpoint for basic check
-app.get('/', (req, res) => {
+app.get('/', (re_, res) => {
     res.json({
         status: "running",
         message: "Backend server is running. Access /api/message for data.",
