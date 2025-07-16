@@ -18,7 +18,7 @@ app.get('/api/message', (_, res) => {
 });
 
 // Root endpoint for basic check
-app.get('/', (re_, res) => {
+app.get('/', (_, res) => {
     res.json({
         status: "running",
         message: "Backend server is running. Access /api/message for data.",
